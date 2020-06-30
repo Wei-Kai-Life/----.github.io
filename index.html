@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./漢堡條.css">
+</head>
+<style>
+    /* * {
+        margin: 0;
+    } */
+
+    /* .home-page {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(52, 80, 80);
+        position: relative;
+        overflow: hidden;
+        animation: home-page 2s ease-out;
+        animation-fill-mode: backwards;
+    }
+    @keyframes home-page{
+        0%{
+            background-color: whitesmoke;
+        }
+        99%{
+            background-color: whitesmoke;
+        }
+    }
+
+    
+    .slider-nav {
+        width: 7%;
+        min-width: 68px;
+        height: 100%;
+        background-color: rgb(51, 48, 47);
+        position: absolute;
+        right: 0%;
+        animation: guide 2s ease-in-out;
+        animation-fill-mode: backwards;
+        animation-iteration-count: 1;
+        opacity: 0;
+        z-index: 5;
+        transition: 0.5s;
+    } */
+
+
+/* 漢堡部分漢堡部分漢堡部分漢堡部分漢堡部分漢堡部分漢堡部分 */
+    /* 以下以下以下 */
+
+    /* .burger-box {
+        width: 7%;
+        min-width: 68px;
+        height: 20%;
+        position: absolute;
+        right: 0%;
+    }
+
+    #hamburger {
+        width: 68px;
+        height: 50%;
+        animation: burger 2s linear forwards;
+        animation-delay: 1s;
+        opacity: 0;
+        z-index: 5;
+        position: relative;
+    } */
+
+    /* .slider-nav:hover {
+        opacity: 1;
+    } */
+
+    /* .slider-nav.opacity {
+        opacity: 1;
+    } */
+
+
+    /* .slider-nav:hover ~.burger-box .burger-bun-top{
+        background: black;
+    }
+    .slider-nav:hover  ~.burger-box .burger-bun-bot{
+        background: black;
+    }
+    .slider-nav:hover ~.burger-box .burger-filling{
+        background-color: rgb(187, 64, 64);
+    } */
+
+
+    /* .burger-box:hover   .burger-bun-bot{
+        background: black;
+    }
+    .burger-box:hover   .burger-bun-top{
+        background: black;
+    }
+    .burger-box:hover   .burger-filling{
+        background-color: rgb(187, 64, 64);
+    } */
+
+
+   
+    /* @keyframes guide {
+        from {
+            top: -100%;
+            opacity: 1;
+        }
+
+        to {
+            top: 0%;
+            opacity: 0;
+        }
+    }
+
+    @keyframes burger {
+        0% {
+            opacity: 0
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        51% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    } */
+
+    /* .menu-container {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(154, 194, 206);
+        transform: translateX(100%);
+        transition: 1s;
+        display: flex;
+    } */
+
+    /* .menu-container.act {
+        transform: translateX(0);
+        transition: 1s;
+    } */
+
+    /* #line {
+        width: 7%;
+        min-width: 68px;
+        height: 25px;
+        position: absolute;
+        right: 0%;
+        border-left: 2px rgb(255, 255, 255) solid;
+    } */
+
+    /* .nav-bg {
+        width: 66%;
+        height: 100%;
+        background-image: url("https://content.shopback.com/tw/wp-content/uploads/2018/03/12153038/%E9%B7%97%E6%BC%AB1.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .menu-content {
+        width: 34%;
+        height: 100%;
+        background-image: url("img/飛鳥恰恰.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    } */
+</style>
+
+<body>
+    <section class="home-page">
+        <div class="slider-nav"></div>
+        <div id="white-line"></div>
+        <div class="burger-box">
+            <div id="hamburger" class="hamburglar">
+                <div class="burger-icon">
+                    <div class="burger-container">
+                        <span class="burger-bun-top"></span>
+                        <span class="burger-filling"></span>
+                        <span class="burger-bun-bot"></span>
+                    </div>
+                </div>
+
+                <!-- svg ring containter -->
+                <div class="burger-ring">
+                    <svg class="svg-ring">
+                        <path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4"
+                            d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
+                    </svg>
+                </div>
+                <!-- the masked path that animates the fill to the ring -->
+
+                <svg width="0" height="0">
+                    <mask id="mask">
+                        <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10"
+                            stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
+                    </mask>
+                </svg>
+                <div class="path-burger">
+                    <div class="animate-path">
+                        <div class="path-rotation"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-container">
+            <div class="nav-bg"></div>
+            <div class="menu-content"></div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- <script src="jquery-3.5.1.min.js"></script> -->
+    <script>
+        var burger = document.querySelector(".hamburglar")
+
+        burger.onclick = function () {
+            if (burger.classList.contains("is-open")) {
+                burger.classList.remove("is-open")
+                burger.classList.add("is-closed")
+            } else {
+                burger.classList.remove("is-closed")
+                burger.classList.add("is-open")
+            }
+        }
+
+        var burger_top = document.querySelector(".burger-bun-top")
+        var burger_filling = document.querySelector(".burger-filling")
+        var burger_bot = document.querySelector(".burger-bun-bot")
+        var slider_nav = document.querySelector(".slider-nav")
+        burger.onmouseover = function () {
+            slider_nav.classList.add("opacity")
+        }
+        burger.onmouseout = function () {
+            slider_nav.classList.remove("opacity")
+        }
+   
+        var burger_box = document.querySelector(".burger-box")
+        var menu_container = document.querySelector(".menu-container")
+        burger_box.onclick = function () {
+            if (menu_container.classList.contains("act")) {
+                menu_container.classList.remove("act")
+            } else {
+                menu_container.classList.add("act")
+            }
+        }
+    </script>
+</body>
+
+</html>
