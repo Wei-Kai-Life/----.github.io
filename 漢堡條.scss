@@ -1,3 +1,113 @@
+
+.home-page{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(52, 80, 80);
+  position: relative;
+  overflow: hidden;
+  animation: home-page 2s ease-out;
+  animation-fill-mode: backwards;
+  .slider-nav {
+    width: 7%;
+    min-width: 68px;
+    height: 100%;
+    background-color: rgb(51, 48, 47);
+    position: absolute;
+    right: 0%;
+    animation: guide 2s ease-in-out;
+    animation-fill-mode: backwards;
+    animation-iteration-count: 1;
+    opacity: 0;
+    z-index: 5;
+    transition: 0.5s;
+    &:hover{
+      opacity: 1;
+    }
+    &:hover ~.burger-box .burger-bun-top{
+      background: black;
+    }
+    &:hover ~.burger-box .burger-bun-bot{
+      background: rgb(168, 18, 18);
+    }
+    &:hover ~.burger-box .burger-filling{
+      background: black;
+    }
+  }
+  #white-line{
+  width: 7%;
+  min-width: 68px;
+  height: 25px;
+  position: absolute;
+  right: 0%;
+  border-left: 2px rgb(255, 255, 255) solid;
+  }
+  .menu-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(154, 194, 206);
+    transform: translateX(100%);
+    transition: 1s;
+    display: flex;
+    .nav-bg {
+      width: 66%;
+      height: 100%;
+      background-image: url("https://content.shopback.com/tw/wp-content/uploads/2018/03/12153038/%E9%B7%97%E6%BC%AB1.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .menu-content {
+      width: 34%;
+      height: 100%;
+    }
+  }
+}
+@keyframes home-page{
+  0%{
+      background-color: whitesmoke;
+  }
+  99%{
+      background-color: whitesmoke;
+  }
+}
+.menu-container.act {
+  transform: translateX(0);
+  transition: 1s;
+}
+.slider-nav.opacity {
+  opacity: 1;
+}
+@keyframes guide {
+  from {
+      top: -100%;
+      opacity: 1;
+  }
+
+  to {
+      top: 0%;
+      opacity: 0;
+  }
+}
+
+@keyframes burger {
+  0% {
+      opacity: 0
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  51% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+
 // 漢堡條套件(改)  備註: (.burger-box裡的元素) 以下以下以下以下以下以下以下以下以下以下以下以下
 
 // vars
@@ -8,6 +118,7 @@ $scale: 1;			  // icon scale 68/68 default
 
 *, *:before, *:after {
   box-sizing: border-box;
+  margin: 0;
  }
 
 // spacing + background-color
@@ -30,19 +141,32 @@ h4 {
   height: 20%;
   position: absolute;
   right: 0%;
-  
+  &:hover .burger-bun-bot{
+    background-color: rgb(187, 64, 64);
+  }
+  &:hover .burger-bun-top{
+  background: black;
+  }
+  &:hover .burger-filling{
+    background: black;
+  }
+  .hamburglar {
+    // transform: scale($scale);
+    width: 68px;
+    height: 50%;
+    margin: 40px auto;
+    animation: burger 2s linear forwards;
+    animation-delay: 1s;
+    opacity: 0;
+    z-index: 5;
+    position: relative;
+    display: block;
+    // background: $blue;
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
 }
-.hamburglar {
-  // transform: scale($scale);
-  margin: 40px auto;
-  position: relative;
-  display: block;
-  width: 68px;
-  height: 68px;
-  // background: $blue;
-  -webkit-touch-callout: none;
-	user-select: none;
-}
+
 
 // transition mask
 .path-burger {
